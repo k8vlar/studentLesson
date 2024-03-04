@@ -50,6 +50,11 @@ class Article
      */
     private $comments;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $BrochureFileName;
+
     public function __construct()
     {
         $this->comments = new ArrayCollection();
@@ -151,5 +156,17 @@ class Article
     }
     public function  __toString(){
         return $this->title;
+    }
+
+    public function getBrochureFileName(): ?string
+    {
+        return $this->BrochureFileName;
+    }
+
+    public function setBrochureFileName(?string $BrochureFileName): self
+    {
+        $this->BrochureFileName = $BrochureFileName;
+
+        return $this;
     }
 }
