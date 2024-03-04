@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\User;
+
 use App\Form\User2Type;
 use App\Repository\UserRepository;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,7 +17,7 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 class ProfileController extends AbstractController
 {
     /**
-     * @Route("/", name="app_profile_show", methods={"GET"})
+     * @Route("", name="app_profile_show", methods={"GET"})
      */
     public function show(): Response
     {
@@ -50,5 +50,4 @@ class ProfileController extends AbstractController
             'form' => $form,
         ]);
     }
-
 }
