@@ -3,7 +3,7 @@
 {% block title %}Comment{% endblock %}
 
 {% block body %}
-    <h1>Comment</h1>
+    <h1>Commentaire a modifier</h1>
 
     <table class="table">
         <tbody>
@@ -12,19 +12,19 @@
                 <td>{{ comment.id }}</td>
             </tr>
             <tr>
-                <th>Content</th>
+                <th>Contenu</th>
                 <td>{{ comment.content }}</td>
             </tr>
             <tr>
-                <th>CreatedAt</th>
+                <th>Date et Heure de création</th>
                 <td>{{ comment.createdAt ? comment.createdAt|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_comment_index') }}">back to list</a>
+    <a class="btn btn-block text-center w-100" href="{{ path('app_admin_comment_index') }}">Retour a la liste des commentaires</a>
 
-    <a href="{{ path('app_admin_comment_edit', {'id': comment.id}) }}">edit</a>
+    <a class="btn btn-block text-center w-100" href="{{ path('app_admin_comment_edit', {'id': comment.id}) }}">Modifier</a>
 
     {{ include('admin_comment/_delete_form.html.twig') }}
 {% endblock %}

@@ -2,10 +2,14 @@
 
 namespace App\Entity;
 
-use App\Repository\CategoryRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\CategoryRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+
+
 
 /**
  * @ORM\Entity(repositoryClass=CategoryRepository::class)
@@ -32,7 +36,7 @@ class Category
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $picture;
+    private $file;
 
     /**
      * @ORM\OneToMany(targetEntity=Article::class, mappedBy="category")
@@ -73,14 +77,15 @@ class Category
         return $this;
     }
 
-    public function getPicture(): ?string
+    public function getFile(): ?string
     {
-        return $this->picture;
+        
+        return $this->file;
     }
 
-    public function setPicture(?string $picture): self
+    public function setFile(?string $file): self
     {
-        $this->picture = $picture;
+        $this->file = $file;
 
         return $this;
     }
@@ -114,6 +119,7 @@ class Category
 
         return $this;
     }
+
     public function  __toString(){
         return $this->title;
     }

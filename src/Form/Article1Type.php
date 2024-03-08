@@ -14,7 +14,6 @@ class Article1Type extends AbstractType
         $builder
             ->add('title')
             ->add('content')
-            ->add('createdAt')
             ->add('user')
             ->add('category')
         ;

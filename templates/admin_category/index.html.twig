@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Category index{% endblock %}
+{% block title %}Matières disponibles pour l'utilisateur{% endblock %}
 
 {% block body %}
-    <h1>Category index</h1>
+    <h1>Matières mises a disposition de l'élève</h1>
 
-    <table class="table">
+    <table class="table my-5">
         <thead>
             <tr>
                 <th>Id</th>
@@ -21,10 +21,12 @@
                 <td>{{ category.id }}</td>
                 <td>{{ category.title }}</td>
                 <td>{{ category.description }}</td>
-                <td>{{ category.picture }}</td>
+                <td>{{ category.file }}</td>
                 <td>
-                    <a href="{{ path('app_admin_category_show', {'id': category.id}) }}">show</a>
-                    <a href="{{ path('app_admin_category_edit', {'id': category.id}) }}">edit</a>
+                    <div>
+                        <a class="btn btn-block text-center w-100" href="{{ path('app_admin_category_show', {'id': category.id}) }}">Consulter les cours</a>
+                        <a class="btn btn-block text-center w-100" href="{{ path('app_admin_category_edit', {'id': category.id}) }}">modifier la matière</a>
+                    </div>
                 </td>
             </tr>
         {% else %}
@@ -35,5 +37,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_category_new') }}">Create new</a>
+    <a class="btn btn-block text-center w-100" href="{{ path('app_admin_category_new') }}">Insérer une nouvelle matière</a>
 {% endblock %}

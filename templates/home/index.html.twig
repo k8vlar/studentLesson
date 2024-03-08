@@ -1,7 +1,29 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}AccueilPage{% endblock %}
 
 {% block body %}
-<h1>hello tout le monde</h1>
+<h1 class="homeTitle m-5">Bienvenue sur STUDENTLESSON</h1>
+    <h4>Ce site est destiné aux étudiants pour trouver des cours en ligne gratuit</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores asperiores amet at soluta. Atque obcaecati quidem eum quibusdam veniam. Nulla hic odio consectetur voluptatem maiores eaque perferendis expedita, itaque totam.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat ullam voluptatibus ratione alias dolorum reprehenderit perferendis fugit cupiditate quae magnam aliquid recusandae accusantium, necessitatibus id adipisci laboriosam animi nisi?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore voluptates asperiores laboriosam quam iure soluta aut voluptas, ipsa ex eius iste quae tenetur neque unde architecto animi velit corporis facere!
+</p>
+<div class="diapo">
+{% for category in categories %}
+  <div class="box">
+    <div class="imgBx">
+      <img src="https://images.unsplash.com/photo-1603984362497-0a878f607b92?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80">
+    </div>
+    <div class="content">
+      <div>
+        <a href="{{ path('app_category_show', {'id': category.id}) }}">
+        <h2> {{ category.title }}</h2>
+        <p>{{ category.description }}</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
 {% endblock %}

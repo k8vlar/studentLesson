@@ -16,15 +16,15 @@
             </tr>
         </thead>
         <tbody>
-        {% for article in articles %}
+        {% for article in pagination %}
             <tr>
                 <td>{{ article.id }}</td>
                 <td>{{ article.title }}</td>
                 <td>{{ article.content }}</td>
                 <td>{{ article.createdAt ? article.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <a href="{{ path('app_admin_article_show', {'id': article.id}) }}">show</a>
-                    <a href="{{ path('app_admin_article_edit', {'id': article.id}) }}">edit</a>
+                    <a class="btn btn-block text-center w-100" href="{{ path('app_admin_article_show', {'id': article.id}) }}">show</a>
+                    <a class="btn btn-block text-center w-100" href="{{ path('app_admin_article_edit', {'id': article.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -34,6 +34,7 @@
         {% endfor %}
         </tbody>
     </table>
+    {{ knp_pagination_render(pagination) }}
 
-    <a href="{{ path('app_admin_article_new') }}">Create new</a>
+    <a class="btn btn-block text-center w-100" href="{{ path('app_admin_article_new') }}">Create new</a>
 {% endblock %}

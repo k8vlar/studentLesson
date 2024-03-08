@@ -5,10 +5,12 @@ namespace App\Controller;
 use App\Entity\Category;
 use App\Form\CategoryType;
 use App\Repository\CategoryRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Vich\UploaderBundle\Form\Type\VichImageType;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 
 /**
  * @Route("/admin/category")
@@ -51,8 +53,10 @@ class AdminCategoryController extends AbstractController
      */
     public function show(Category $category): Response
     {
+        $articles = $category->getArticles();
         return $this->render('admin_category/show.html.twig', [
             'category' => $category,
+            'articles' => $articles,
         ]);
     }
 

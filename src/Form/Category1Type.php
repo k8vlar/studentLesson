@@ -14,7 +14,7 @@ class Category1Type extends AbstractType
         $builder
             ->add('title')
             ->add('description')
-            ->add('picture')
+            ->add('file')
         ;
     }
 

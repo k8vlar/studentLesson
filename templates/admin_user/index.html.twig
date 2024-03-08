@@ -3,7 +3,7 @@
 {% block title %}User index{% endblock %}
 
 {% block body %}
-    <h1>User index</h1>
+    <h1>Liste des Utilisateurs</h1>
 
     <table class="table">
         <thead>
@@ -21,8 +21,8 @@
                 <td>{{ user.email }}</td>
                 <td>{{ user.isVerified ? 'Yes' : 'No' }}</td>
                 <td>
-                    <a href="{{ path('app_admin_user_show', {'id': user.id}) }}">show</a>
-                    <a href="{{ path('app_admin_user_edit', {'id': user.id}) }}">edit</a>
+                    <a class="btn btn-block text-center w-100" href="{{ path('app_admin_user_show', {'id': user.id}) }}">afficher le profil de l'utilisateur</a>
+                    <a class="btn btn-block text-center w-100" href="{{ path('app_admin_user_edit', {'id': user.id}) }}">modifier le profil de l'utilisateur</a>
                 </td>
             </tr>
         {% else %}
@@ -33,5 +33,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_user_new') }}">Create new</a>
+    <a class="btn btn-block text-center w-100" href="{{ path('app_admin_user_new') }}">Creer un nouvel utilisateur</a>
 {% endblock %}
