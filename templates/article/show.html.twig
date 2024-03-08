@@ -27,7 +27,7 @@
     </table>
 
 <div>
-    <a href="{{ path('app_comment_new', {'id': article.id})}}">Ajouter un commentaire</a>
+    <a class="btn btn-block text-center w-100" href="{{ path('app_comment_new', {'id': article.id})}}">Ajouter un commentaire</a>
 </div>
 <div>
     {% for comment in comments %}
@@ -35,5 +35,5 @@
         <div> {{ comment.content}}</div>
     {% endfor %}
 </div>
-    <a href="{{ path('app_category_index') }}">back to Matières</a>
+    <a class="btn btn-block text-center w-100" href="{{ path('app_category_index') }}">back to Matières</a>
 {% endblock %}

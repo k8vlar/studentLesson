@@ -3,26 +3,14 @@
 {% block title %}ProfilePage{% endblock %}
 
 {% block body %}
-    <h1>Hello, voici ton profil {{ user.email }}</h1>
-
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ user.id }}</td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td>{{ user.email }}</td>
-            </tr>
-            <tr>
-                <th>IsVerified</th>
-                <td>{{ user.isVerified ? 'Yes' : 'No' }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-
-    <a href="{{ path('app_profile_edit') }}">edit</a>
+    <h1 class="mt-5">Hello, voici ton profil {{ user.email }}</h1>
+            <div class="card mb-3 container w-50 center mt-5">
+                <h4 class="card-title text-center">{{user.name}}</h4>
+                <h4 class="card-title text-center">{{user.firstname}}</h4>
+                <h3 class="card-title text-center"> {{ user.email }} </h3>
+                <ul class="list-group list-group-flush border: solid 1px black border-radius: 10px;">
+                    <li class="list-group-item card-body text-center"> <a href="{{path('app_profile_edit')}}" class="btn btn-success btn-block text-center w-40">Modifier</a></li>
+                </ul>
+            </div>
 
 {% endblock %}

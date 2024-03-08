@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main{
+    width: 95%;
+    background: linear-gradient(45deg,#FFCA08,#79C2BE)!important;
+  
+  }
+  .btn{
+    background: linear-gradient(45deg,#79C2BE,#FFCA08)!important;
+  }
+  .container{
+    background: linear-gradient(180deg,white,#79c2be73);
+  }
+  th{
+    background: none !important;
+  }
+ td{
+    background: none !important;
+  }
+  li{
+    background: none !important;
+  }
+  tbody{
+    background: none !important;
+  }
+  .container2{
+    background: rgba(255, 255, 255, 0.6) !important;
+  }
+  .beforeCategoryLessons{
+    font-size: 30px;
+    text-decoration: underline;
+    color: #b45811;
+
+  }
+  .categoryTitle{
+    font-size: 50px;
+    
+    text-transform: uppercase;
+    color:#2362B0 ;
+
+  }
+  .pagination {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pagination li {
+    margin: 0 5px;
+  }
+  
+  .pagination a {
+    display: block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: none;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .pagination a:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .pagination .current {
+    border: #2362B0 solid 1px;
+    color: black;
+  }
+  
+  .pagination .disabled {
+    background-color: #f0f0f0;
+    color: #ccc;
+    cursor: not-allowed;
+  }
+
+  .diapo {
+    position: relative;
+    width: 1160px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    margin: auto;
+  }
+  .diapo .box {
+    position: relative;
+    width: 275px;
+    height: 275px;
+    background: #000;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    margin-right: 15px;
+    margin-top: 45px;
+  }
+  .diapo:hover .box {
+    transform: rotateY(25deg);
+  }
+  .diapo .box:hover ~ .box {
+    transform: rotateY(-25deg);
+  }
+  .diapo .box:hover {
+    transform: rotateY(0deg) scale(1.25);
+    z-index: 1;
+    box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+  }
+  .diapo .box .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .diapo .box .imgBx:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,#2362B0,#000);
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+    mix-blend-mode: multiply;
+  }
+  .diapo .box:hover .imgBx:before {
+    opacity: 1;
+  }
+  .diapo .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .diapo .box .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    padding: 20px;
+    align-items: flex-end;
+    box-sizing: border-box;
+  }
+  .diapo .box .content h2 {
+    color: #EC781D;
+    transition: 0.5s;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 25px;
+    transform: translateY(200px);
+    transition-delay: 0.3s;
+  }
+  .diapo .box:hover .content h2 {
+    transform: translateY(0px);
+  }
+  .diapo .box .content p {
+    color: #fff;
+    transition: 0.5s;
+    font-size: 18px;
+    transform: translateY(200px);
+    transition-delay: 0.4s;
+  }
+  .diapo .box:hover .content p {
+    transform: translateY(0px);
+  }
+ .diapo .box .content a{
+  text-decoration: none !important;
+ }

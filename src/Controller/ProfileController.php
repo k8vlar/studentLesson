@@ -21,9 +21,11 @@ class ProfileController extends AbstractController
      */
     public function show(): Response
     {
+        //$comments = $this-> getComments();
         $user = $this-> getUser();
         return $this->render('profile/show.html.twig', [
             'user' => $user,
+           // 'comments'=> $comments
         ]);
     }
 
@@ -35,6 +37,7 @@ class ProfileController extends AbstractController
         $user = $this->getUser();
         $form = $this->createForm(User2Type::class, $user);
         $form->handleRequest($request);
+        
 
         if ($form->isSubmitted() && $form->isValid()) {
             $plainPassword = $form->get('plainPassword')->getData();
@@ -48,6 +51,7 @@ class ProfileController extends AbstractController
         return $this->renderForm('profile/edit.html.twig', [
             'user' => $user,
             'form' => $form,
+            
         ]);
     }
 }

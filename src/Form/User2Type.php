@@ -18,6 +18,7 @@ class User2Type extends AbstractType
                 'mapped' => false,
 
             ])
+            ->add('comments')
             ->add('isVerified')
         ;
     }

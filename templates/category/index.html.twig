@@ -1,34 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Category index{% endblock %}
+{% block title %}Les différents Matières disponibles{% endblock %}
 
 {% block body %}
-    <h1>Category index</h1>
+    <h1>Matières a étudier</h1>
 
-    <table class="table">
+    <table class="table my-5">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Title</th>
+                <th>Ensemble des matières</th>
                 <th>Description</th>
-                <th>Picture</th>
-                <th>actions</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
         {% for category in categories %}
             <tr>
-                <td>{{ category.id }}</td>
-                <td>{{ category.title }}</td>
+                <td class="fs-4">{{ category.title }}</td>
                 <td>{{ category.description }}</td>
-                <td>{{ category.picture }}</td>
                 <td>
-                    <a href="{{ path('app_category_show', {'id': category.id}) }}">show</a>
+                    <a class="btn btn-block text-center w-100" href="{{ path('app_category_show', {'id': category.id}) }}">Affiche les cours correspondants</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="5">no records found</td>
+                <td colspan="5">Aucune matière disponible</td>
             </tr>
         {% endfor %}
         </tbody>
