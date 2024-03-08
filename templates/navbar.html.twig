@@ -1,12 +1,14 @@
 <div class="main">
     <nav class="navbar navbar-expand-lg bg-green-500">
             <div class="container-fluid ">
-                <a class="navbar-brand" href="#">StudentLessons</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+               
+                <div class=" collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class=" navbarGauche navbar-nav me-auto mb-2 mb-lg-0">
+                        <li>
+                         <a class="nav-link active" aria-current="page" href=" {{ path('app_home')}}">
+                            <img class="logo" src="/asset/images/logoSL.png" alt="logo">
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href=" {{ path('app_home')}}">Accueil</a>
                         </li>
@@ -14,7 +16,8 @@
                             <a class="nav-link" href="{{ path('app_category_index')}}">Les Matières</a>
                         </li>
                     </ul>
-                    <ul class="navbar-nav mb-2 mb-lg-0">
+                    </div>
+                    <ul class="navbarDroite navbar-nav mb-2 mb-lg-0">
                      {% if is_granted("ROLE_ADMIN") %} 
                         <li class="d-flex nav-item dropdown mr-5">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -29,19 +32,18 @@
                             </ul>
                         </li>
                        {% endif %}
-                    <li class="d-flex nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                MON COMPTE
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ path('app_register')}}">Inscrivez-vous</a></li>
-                                <li><a class="dropdown-item" href="{{ path('app_login')}}">Connexion</a></li>
-                                <li><a class="dropdown-item" href="{{ path('app_profile_show') }}">Profil</a></li>
-                                <li><a class="dropdown-item" href="{{ path('app_logout') }}">Déconnexion</a></li>
-                            </ul>
+                        <li class="d-flex nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    MON COMPTE
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="{{ path('app_register')}}">Inscrivez-vous</a></li>
+                                    <li><a class="dropdown-item" href="{{ path('app_login')}}">Connexion</a></li>
+                                    <li><a class="dropdown-item" href="{{ path('app_profile_show') }}">Profil</a></li>
+                                    <li><a class="dropdown-item" href="{{ path('app_logout') }}">Déconnexion</a></li>
+                                </ul>
                         </li>
                     </ul>
-                </div>
             </div>
         </nav>
 </div>

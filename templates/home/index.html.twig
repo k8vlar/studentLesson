@@ -13,7 +13,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat ullam vol
 {% for category in categories %}
   <div class="box">
     <div class="imgBx">
-      <img src="https://images.unsplash.com/photo-1603984362497-0a878f607b92?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80">
+      <img src="{{ vich_uploader_asset(category, 'imageFile')}}" alt="categoryPictures" class='articleImage' >
     </div>
     <div class="content">
       <div>

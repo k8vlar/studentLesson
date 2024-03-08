@@ -93,6 +93,7 @@ class Comment
     }
 
     public function  __toString(){
-        return $this->article;
+        
+    return $this->getContent();
     }
 }
