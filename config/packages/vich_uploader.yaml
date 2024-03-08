@@ -5,9 +5,7 @@ vich_uploader:
         type: annotation
 
     mappings:
-        category_thumbnail:
-            uri_prefix: '%category_images%'
-            upload_destination: '%kernel.project_dir%/public%category_images%'
+        categoryPictures:
+            uri_prefix: asset/images/category
+            upload_destination: '%kernel.project_dir%/public/asset/images/category'
             namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
-
-    

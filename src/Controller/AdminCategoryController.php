@@ -24,6 +24,7 @@ class AdminCategoryController extends AbstractController
     {
         return $this->render('admin_category/index.html.twig', [
             'categories' => $categoryRepository->findAll(),
+            
         ]);
     }
 

@@ -17,14 +17,14 @@
             </tr>
             <tr>
                 <th>Picture</th>
-                <td>{{ category.file }}</td>
+                <td><img src="{{ vich_uploader_asset(category, 'imageFile')}}" alt="categoryPictures" class='articleImage' ></td>
             </tr>
             {% for article in articles %}
             <tr>
                 <td>{{ article.title }}</td>
                 <td class="fst-italic">{{ article.content }}</td>
                 <td>
-                    <a class="btn btn-block text-center w-100" href="{{ path('app_article_show', {'id': article.id}) }}">Consulter les Cours</a>
+                    <a class="btn btn-block text-center w-100" href="{{ path('app_article_show', {'id': article.id}) }}">Consulter le Cours</a>
                 </td>
             </tr>
         {% else %}
