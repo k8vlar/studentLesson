@@ -5,24 +5,29 @@
 {% block body %}
         <h1 class= "categoryTitle">{{ category.title }}</h1>
 
-        <table class="table">
-            <tbody>
+        <table class="table mt-5">
+            <thead>
                 <tr>
                     <th>Description</th>
                     <td>{{ category.description }}</td>
+                
                 </tr>
                 <tr>
-                    <th>Picture</th>
+                 <th>Picture</th>
                     <td> <img src="{{ vich_uploader_asset(category, 'imageFile')}}" alt="categoryPictures" class='articleImage' ></td>
+                
                 </tr>
-            </tbody>
-        </table>
-        <div>
-        <table class="table mt-5">
-            <div class="beforeCategoryLessons">
-                <h3>Cours contenus dans cette matière :</h3>
-            </div>
-        <div class="row mt-5">
+                <tr>
+                    <th colspan='2'>
+                        <div class="beforeCategoryLessons">
+                            <h3>Cours contenus dans cette matière :</h3>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            <th>
+    <div class="row mt-5">
 {% for article in articles %}
         <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
             <div class="card mb-3 container2"> 
@@ -37,8 +42,12 @@
         <div>
                 <td colspan="5">Aucune matière disponible</td>
         </div>
-
+    
 {% endfor %}
+            </th>
+      
+</tbody>
+</table>
         </div>
             <a class="btn btn-block text-center w-100 mt-5" href="{{ path('app_category_index') }}">Retour aux Matières</a> 
         </div>
