@@ -1,0 +1,84 @@
+<footer class="footerBase container-fluid bg-grey py-5 mt-5">
+<div class="footerContainer">
+   <div class="row">
+      <div class="col-md-6">
+         <div class="row">
+            <div class="col-md-6 ">
+               <div class="logo-part">
+                  <img src="/asset/images/logoSL.png" class="w-50 logo-footer" >
+                  <p>1 Avenue des 40 Journaux 33300 Bordeaux</p>
+                  <p class="text-bolder">StudentLesson: Apprentissage Gratuit...pour les grands et les petits</p>
+               </div>
+            </div>
+            <div class="col-md-6 px-4">
+               <h6> A propos de StudentLesson</h6>
+               <p>Créé en 2024, pour améliorer les connexions entre apprentis et professeurs</p>
+               <a href="#" class="btn-footer"> More Info </a><br>
+               <a href="{{ path('app_contact')}}" class="btn-footer"> Contact Us</a>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-6">
+         <div class="row">
+            <div class="col-md-6 px-4">
+               <h6> Help us</h6>
+               <div class="row ">
+                  <div class="col-md-6">
+                     <ul>
+                        <li> <a class="afooter" href="#"> Home</a> </li>
+                        <li> <a  class="afooter" href="#"> About</a> </li>
+                        <li> <a  class="afooter" href="#"> Service</a> </li>
+                        <li> <a  class="afooter" href="#"> Team</a> </li>
+                        <li> <a  class="afooter" href="#"> Help</a> </li>
+                        <li> <a  class="afooter" href="#"> Contact</a> </li>
+                     </ul>
+                  </div>
+                  <div class="col-md-6 px-4">
+                     <ul>
+                        <li> <a  class="afooter" href="#"> Cab Faciliy</a> </li>
+                        <li> <a  class="afooter" href="#"> Fax</a> </li>
+                        <li> <a  class="afooter" href="#"> Terms</a> </li>
+                        <li> <a  class="afooter" href="#"> Policy</a> </li>
+                        <li> <a  class="afooter" href="#"> Refunds</a> </li>
+                        <li> <a  class="afooter" href="#"> Paypal</a> </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-6 ">
+               <h6> Newsletter</h6>
+               <div class="social">
+                  <a class="afooter" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  <a class="afooter" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+               </div>
+               <div>
+                <form class="form-footer my-3">
+                  <input type="search"  placeholder="Recherche...." name="search" >
+                  <button type="submit">Go</button> 
+               </form>
+               </div>
+              
+               {#<table>
+                 {% for article in articles %}
+                <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                    <div class="card mb-3 container2">
+                        <a href="{{path('app_article_show', {'id': article.id})}}" class="btn btn-block text-center w-100">
+                        <h4 class="card-title text-center">{{article.title}}</h4></a>
+                        <ul class="list-group list-group-flush border: solid 1px black border-radius: 10px;">
+                            <li class="list-group-item text-center">{{article.content}}</li>
+                        </ul>
+                    </div>
+                </div>
+        {% else %}
+                <div>
+                        <td colspan="5">Aucune matière disponible</td>
+                </div>
+        {% endfor %}
+               </table>#}
+                 
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</footer>

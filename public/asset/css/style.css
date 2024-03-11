@@ -9,17 +9,19 @@
     justify-content: center;
     align-items: center;
   }
+  
+   /*************************************************************NAVBAR*************************************************/
+
   .main{
-    width: 95%;
+    width: 100%;
     background: linear-gradient(45deg,#FFCA08,#79C2BE)!important;
     font-size: 30px;
-  
   }
   .logo{
     width: 50px;
     height: 50px;
   }
-  
+ 
   .navbarDroite{
     gap: 50px;
 
@@ -28,7 +30,7 @@
     gap:  50px;
 
   }
-  
+  /*************************************************************BUTTTTONNNSS*************************************************/
   .btn{
     background: linear-gradient(45deg,#79C2BE,#FFCA08)!important;
   }
@@ -63,6 +65,8 @@
     color:#2362B0 ;
 
   }
+   /************************************************************PAGINATION*******************************************************/
+
   .pagination {
     list-style: none;
     margin: 0;
@@ -99,6 +103,8 @@
     color: #ccc;
     cursor: not-allowed;
   }
+
+   /**********************************************************DIAPOS PAGEHOME INDEX*************************************************/
 
   .diapo {
     position: relative;
@@ -198,6 +204,119 @@
   .diapo .box:hover .content p {
     transform: translateY(0px);
   }
- .diapo .box .content a{
+.diapo .box .content a{
   text-decoration: none !important;
  }
+
+   /************************************************************FOOOOOOTTTEEERRR*********************************************************/
+
+.footerContainer{
+  display: flex;
+  justify-content: center;
+  
+  width: 1450px !important;
+}
+.row{
+  width: 100%;
+  margin-left: 22px;
+}
+.footerBase{
+  display: flex;
+  justify-content: center;
+  width: 100% !important;
+}
+.bg-grey {
+  background:linear-gradient(45deg,#FFCA08,#79C2BE);
+}
+.logo-footer {
+  margin-bottom: 40px;
+}
+footer {
+width: 100%;
+color: black;
+}
+footer p, a {
+font-size: 12px;
+font-family: 'Roboto', sans-serif;
+}
+footer h6 {
+font-family: 'Playfair Display', serif;
+margin-bottom: 40px;
+position: relative;
+}
+footer h6:after {
+position: absolute;
+content: "";
+background: grey;
+width: 12%;
+height: 1px;
+left: 0;
+bottom: -20px;
+}
+.btn-footer {
+color:black;
+
+text-decoration: none;
+border: 1px solid;
+border-radius: 43px;
+font-size: 13px;
+padding: 7px 30px;
+line-height: 47px;
+}
+.btn-footer:hover {
+          
+text-decoration: none;
+         
+}
+.form-footer input[type="text"] {
+border: none;
+border-radius: 16px 0 0 16px;
+outline: none;
+padding-left: 10px;
+
+}
+::placeholder {
+font-size: 10px;
+padding-left: 10px;
+font-style: italic;
+}
+.form-footer input[type="search"] {
+border: none;
+background:#232323;
+  margin-left: -5px;
+color: #fff;
+outline: none;
+border-radius: 0 16px 16px 0;
+padding: 2px 12px;
+}
+.social .fa {
+color: black !important;
+font-size: 22px;
+padding: 10px 15px;
+background: none;
+}
+footer ul li {
+list-style: none;
+display: block;
+}
+footer ul  {
+padding-left: 0;
+}
+footer ul  li a{
+text-decoration: none;
+color: black !important;
+text-decoration:none;
+}
+.afooter:hover {
+text-decoration: none;
+color: #f5f5f5 !important;
+
+}
+.logo-part {
+border-right: 1px solid black;
+height: 100%;
+}
+
+.searchHidden{
+  display: block;
+}
