@@ -15,7 +15,6 @@ class CommentType extends AbstractType
             ->add('content')
             ->add('article')
             ->add('user')
-            ->add('comment')
         ;
     }
 

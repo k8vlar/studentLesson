@@ -17,10 +17,10 @@ class SearchController extends AbstractController
     public function index(Request $request, ArticleRepository $articleRepository): Response
     {
         $search = $request ->query->get('search');
-        $artcles = $articleRepository->findBySearch($search);
+        $articles = $articleRepository->findBySearch($search);
         return $this->render('search/index.html.twig', [
             'controller_name' => 'SearchController',
-            'articles' => $artcles
+            'articles' => $articles
         ]);
     }
 }

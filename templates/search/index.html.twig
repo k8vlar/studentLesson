@@ -3,15 +3,8 @@
 {% block title %}Hello SearchController!{% endblock %}
 
 {% block body %}
-<div>
-    <form>
-        <input  type="search" name="search" placeholder="Recherche..."/>
-        <button type="submit">Rechercher</button>
-    </form>
-</div>
-<div class="row mt-5">
+Voici les résultats de votre recherche:
     <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-        <table>
         {% for article in articles %}
                 <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
                     <div class="card mb-3 container2"> 
@@ -27,7 +20,6 @@
                         <td colspan="5">Aucun matière disponible</td>
                 </div>
         {% endfor %}
-        </table>
     </div>
 </div>
 

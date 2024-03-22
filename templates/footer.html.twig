@@ -52,30 +52,11 @@
                   <a class="afooter" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                </div>
                <div>
-                <form class="form-footer my-3">
+                <form class="form-footer my-3" action="{{ path('app_search')}}" method="GET">
                   <input type="search"  placeholder="Recherche...." name="search" >
                   <button type="submit">Go</button> 
                </form>
                </div>
-              
-               {#<table>
-                 {% for article in articles %}
-                <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                    <div class="card mb-3 container2">
-                        <a href="{{path('app_article_show', {'id': article.id})}}" class="btn btn-block text-center w-100">
-                        <h4 class="card-title text-center">{{article.title}}</h4></a>
-                        <ul class="list-group list-group-flush border: solid 1px black border-radius: 10px;">
-                            <li class="list-group-item text-center">{{article.content}}</li>
-                        </ul>
-                    </div>
-                </div>
-        {% else %}
-                <div>
-                        <td colspan="5">Aucune matière disponible</td>
-                </div>
-        {% endfor %}
-               </table>#}
-                 
             </div>
          </div>
       </div>

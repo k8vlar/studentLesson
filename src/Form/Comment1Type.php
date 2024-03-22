@@ -13,6 +13,7 @@ class Comment1Type extends AbstractType
     {
         $builder
             ->add('content')
+           
         ;
     }
 
