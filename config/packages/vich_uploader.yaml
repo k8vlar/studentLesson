@@ -6,6 +6,6 @@ vich_uploader:
 
     mappings:
         categoryPictures:
-            uri_prefix: asset/images/category
+            uri_prefix: /asset/images/category
             upload_destination: '%kernel.project_dir%/public/asset/images/category'
             namer: Vich\UploaderBundle\Naming\SmartUniqueNamer

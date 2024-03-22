@@ -5,15 +5,14 @@
 {% block body %}
         <h1 class= "categoryTitle">{{ category.title }}</h1>
 
-        <table class="table mt-5">
+        <table class="table mt-5 align-middle text-align">
             <thead>
                 <tr>
                     <th>Description</th>
-                    <td>{{ category.description }}</td>
-                
+                    <th>Picture</th>
                 </tr>
-                <tr>
-                 <th>Picture</th>
+                <tr class="text-center " >
+                    <td >{{ category.description }}</td>
                     <td> <img src="{{ vich_uploader_asset(category, 'imageFile')}}" alt="categoryPictures" class='articleImage' ></td>
                 
                 </tr>
@@ -25,8 +24,9 @@
                     </th>
                 </tr>
             </thead>
+            </table>
+        <table>
             <tbody>
-            <th>
     <div class="row mt-5">
 {% for article in articles %}
         <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
@@ -44,7 +44,6 @@
         </div>
     
 {% endfor %}
-            </th>
       
 </tbody>
 </table>

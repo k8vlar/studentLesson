@@ -40,8 +40,12 @@
   th{
     background: none !important;
   }
+  .align-middle td{
+    vertical-align: middle;
+  }
  td{
     background: none !important;
+   
   }
   li{
     background: none !important;
@@ -51,6 +55,16 @@
   }
   .container2{
     background: rgba(255, 255, 255, 0.6) !important;
+  }
+
+  .articleImage{
+    width: 300px;
+  }
+  .titleLesson{
+    font-size: 2em;
+    color: #FFCA08 ;
+    border-color: #79C2BE;
+
   }
   .beforeCategoryLessons{
     font-size: 30px;
