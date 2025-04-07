@@ -42,13 +42,11 @@ class AdminCategoryController extends AbstractController
 
             return $this->redirectToRoute('app_admin_category_index', [], Response::HTTP_SEE_OTHER);
         }
-
         return $this->renderForm('admin_category/new.html.twig', [
             'category' => $category,
             'form' => $form,
         ]);
     }
-
     /**
      * @Route("/{id}", name="app_admin_category_show", methods={"GET"})
      */
@@ -60,7 +58,6 @@ class AdminCategoryController extends AbstractController
             'articles' => $articles,
         ]);
     }
-
     /**
      * @Route("/{id}/edit", name="app_admin_category_edit", methods={"GET", "POST"})
      */
@@ -80,7 +77,6 @@ class AdminCategoryController extends AbstractController
             'form' => $form,
         ]);
     }
-
     /**
      * @Route("/{id}", name="app_admin_category_delete", methods={"POST"})
      */
@@ -89,7 +85,6 @@ class AdminCategoryController extends AbstractController
         if ($this->isCsrfTokenValid('delete'.$category->getId(), $request->request->get('_token'))) {
             $categoryRepository->remove($category, true);
         }
-
         return $this->redirectToRoute('app_admin_category_index', [], Response::HTTP_SEE_OTHER);
     }
 }
